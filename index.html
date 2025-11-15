@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PGR Product Authentication Center</title>
+    <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">
+        <a href="index.html"><img src="Images/Icon.png" alt="Logo"></a>
+        <span class="logo-text"><span class="gold-highlight">|</span> WORLDWIDE</span>
+    </div>
+
+    <ul class="nav-links">
+      <li><span class="gold-highlight">|</span><a href="#authenticate">Authenticate</a></li>
+      <li><span class="gold-highlight">|</span><a href="#about">About PGR</a></li>
+      <li><span class="gold-highlight">|</span><a href="mailto:contact@geekcultcha.shop">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+      <h1>PGR Product Authentication Center</h1>
+      <p class="trust-statement">**100% Guaranteed Authenticity. Verify your Certificate of Authenticity (COA) code below.**</p>
+  </header>
+
+  <main>
+      <section id="authenticate">
+          <h2>Verify Your Collectible Now</h2>
+          <div class="authentication-form">
+              <label for="coa-code">Enter COA Code:</label>
+              <input type="text" id="coa-code" name="coa-code" placeholder="e.g., PGR-A1B2C3D4E5" required>
+              <button type="submit">Authenticate</button>
+          </div>
+          <p class="verification-guide">
+              **Your unique COA code can be found on the physical Certificate of Authenticity that accompanies your framed vinyl, script, or facsimile.** Please ensure you enter the code exactly as it appears.
+          </p>
+      </section>
+
+      <hr> 
+
+      <section id="about">
+          <div class="about-content">
+              <div class="text-block">
+                  <h2>Our Commitment to Authenticity</h2>
+                  <p>
+                      As the exclusive provider of these unique collectible and vinyl products in Turkey, PGR is dedicated to providing you with an unparalleled experience. 
+                      We ensure that every item you purchase, from framed custom albums to signed movie scripts, is <span class='bold'>100% genuine</span>. Use the authentication tool above to instantly 
+                      verify the originality of your collectible.
+                  </p>
+              </div>
+              <img src="Images/file.jpeg" alt="PGR GeekCultcha Logo, We Buy We Sell We Trade" class="about-image">
+          </div>
+      </section>
+  </main>
+
+  <footer>
+      <div class="footer-links">
+          <p>&copy; 2025 PGR | A GeekCultcha Brand</p>
+          <a href="https://www.geekcultcha.shop/shipping-return" target="_blank">Shipping & Returns</a> | 
+          <a href="https://www.geekcultcha.shop/terms-conditions" target="_blank">Terms & Conditions</a> | 
+          <a href="mailto:contact@geekcultcha.shop">Contact Support</a>
+      </div>
+  </footer>
+<script>    
+    // Doğrulama butonunu çalıştıran mevcut kodunuz
+    document.querySelector('.authentication-form button').addEventListener('click', function(e) {
+        e.preventDefault();
+        const code = document.getElementById('coa-code').value;
+        if (code) {
+            alert(`Authentication request for code "${code}" submitted. In the live version, this would show the product details and verification status.`);
+        } else {
+            alert("Please enter a COA code to proceed with authentication.");
+        }
+    });
+</script>
+</body>
+</html>

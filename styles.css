@@ -1,0 +1,298 @@
+/* 1. Reset ve Genel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bold {
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    padding-top: 70px; 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+/* 2. Navigasyon */
+nav {
+    background-color: #1a1a1a;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 70px;
+    width: 70px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+}
+
+.gold-highlight {
+    color: #FFC300;
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 5px 0;
+}
+
+.nav-links a.active {
+    color: #FFC300; /* Aktif bağlantı için altın sarısı renk */
+    border-bottom: 2px solid #FFC300; /* Altına ince bir çizgi ekleyerek vurguyu artırır */
+    padding-bottom: 3px; /* Çizgi ile metin arasına boşluk */
+}
+
+.nav-links a:hover {
+    color: #FFC300;
+}
+
+/* 3. Header */
+header {
+    background-color: #fff;
+    padding: 80px 5%;
+    text-align: center;
+    border-bottom: 5px solid #FFC300;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.trust-statement {
+    font-size: 1.2em;
+    color: #DAA520;
+    font-weight: 600;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2em;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* 4. Authentication Form */
+#authenticate {
+    text-align: center;
+    padding: 60px 5%;
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 10px;
+}
+
+.authentication-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.authentication-form label {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #555;
+    text-align: left;
+    width: 100%;
+    max-width: 450px;
+    margin-top: 10px;
+}
+
+#coa-code {
+    width: 100%;
+    max-width: 450px;
+    padding: 18px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.2em;
+    text-align: center;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#coa-code:focus {
+    border-color: #FFC300;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 195, 0, 0.5);
+}
+
+.authentication-form button {
+    background-color: #FFC300;
+    color: #1a1a1a;
+    font-weight: bold;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.1s;
+    width: 100%;
+    max-width: 450px;
+    margin-top: 10px;
+}
+
+.authentication-form button:hover {
+    background-color: #DAA520;
+}
+
+.verification-guide {
+    margin-top: 30px;
+    color: #777;
+    font-style: italic;
+    font-size: 0.95em;
+}
+
+/* 5. Hakkımızda Bölümü (KESİN SOLA SABİTLEME) */
+#about {
+    padding: 60px 5%;
+    max-width: 1000px;
+    margin: 40px auto;
+    text-align: left; 
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    /* Metin sola, görsel sağa itilir */
+    justify-content: space-between; 
+    align-items: center; /* Dikeyde ortalama */
+    gap: 30px;
+}
+
+.text-block {
+    /* Metin bloğuna görselin 4 katı alan verilir, sıkışma önlenir */
+    flex: 4; 
+    text-align: left; 
+}
+
+#about h2 {
+    text-align: left; /* BAŞLIĞI KESİNLİKLE SOLA SABİTLER */
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+#about p {
+    text-align: left; /* PARAGRAFI KESİNLİKLE SOLA SABİTLER */
+    font-size: 1.1em;
+    color: black;
+    margin: 0;
+}
+
+.about-image {
+    flex: 1; /* Görsel alanın geri kalanını alır */
+    max-width: 350px;
+    /* Görselin metin alanını bozmasını engeller */
+    min-width: 200px; 
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 6. Footer */
+footer {
+    background-color: #1a1a1a;
+    color: #bbb;
+    padding: 25px 5%;
+    text-align: center;
+    font-size: 0.9em;
+    border-top: 5px solid #FFC300;
+}
+
+.footer-links a {
+    color: #FFC300;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* 7. Responsive Ayarlar */
+@media (max-width: 800px) {
+    .about-content {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 30px;
+    }
+    .text-block, #about h2, #about p {
+        text-align: center; /* Mobil görünümde ortalama daha iyidir */
+    }
+    .about-image { 
+        max-width: 80%; 
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-top: 60px;
+    }
+    nav {
+        padding: 10px 3%;
+    }
+    .nav-links {
+        display: none;
+    }
+    header {
+        padding: 50px 3%;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .trust-statement {
+        font-size: 1em;
+    }
+    #authenticate, #about {
+        margin: 20px auto;
+        padding: 30px 3%;
+    }
+    .authentication-form button {
+        padding: 15px 20px;
+        font-size: 1.1em;
+    }
+}
